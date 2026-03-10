@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+build/
+out/
+
+# Fabric Loom cache
+.loom/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.classpath
+*.project
+*.factorypath
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keep wrapper jar out of git (downloaded in CI)
+gradle/wrapper/gradle-wrapper.jar

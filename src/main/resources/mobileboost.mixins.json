@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "com.mobileboost.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MixinFastChunk",
+    "MixinChunkOcclusionCulling",
+    "MixinFrustumCull",
+    "MixinReduceBlockUpdates",
+    "MixinNoFog",
+    "MixinNoWeather",
+    "MixinSmartSky",
+    "MixinLightmapOptimize"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "mobileboost",
+  "version": "4.0.0",
+  "name": "MobileBoost ULTRA",
+  "description": "Sodium-level render optimizations for mobile: FastChunk, OcclusionCulling, FrustumCull, NoFog, LightmapThrottle, AntiStutter",
+  "authors": ["MobileBoost"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.mobileboost.MobileBoostMod"
+    ]
+  },
+  "mixins": [
+    "mobileboost.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "fabric-api": "*",
+    "minecraft": "~1.21.11"
+  }
+}
