@@ -24,7 +24,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
-          gradle-version: "8.8"
+          gradle-version: "9.2"
 
       - name: Grant execute permission to gradlew
         run: chmod +x gradlew
@@ -32,11 +32,9 @@ jobs:
       - name: Download Gradle Wrapper JAR
         run: |
           mkdir -p gradle/wrapper
-          curl -sSL "https://github.com/gradle/gradle/raw/v8.8.0/gradle/wrapper/gradle-wrapper.jar" \
+          curl -sSL "https://raw.githubusercontent.com/gradle/gradle/v9.2.0/gradle/wrapper/gradle-wrapper.jar" \
             -o gradle/wrapper/gradle-wrapper.jar || \
-          wget -q "https://services.gradle.org/distributions/gradle-8.8-wrapper.jar" \
-            -O gradle/wrapper/gradle-wrapper.jar || \
-          gradle wrapper --gradle-version=8.8
+          gradle wrapper --gradle-version=9.2
 
       - name: Cache Gradle & Loom caches
         uses: actions/cache@v4
@@ -49,7 +47,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Build mod with Gradle
+      - name: Build mod
         run: ./gradlew build --no-daemon
         env:
           GRADLE_OPTS: "-Xmx2g -Xms512m"
